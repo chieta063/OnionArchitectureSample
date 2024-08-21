@@ -13,14 +13,15 @@ let package = Package(
   ],
   dependencies: [
     .package(name: "Domain", path: "../Domain"),
-    .package(name: "Common", path: "../Common")
+    .package(name: "Common", path: "../Common"),
+    .package(name: "Infrastructure", path: "../Infrastructure")
   ],
   targets: [
     // Targets are the basic building blocks of a package, defining a module or a test suite.
     // Targets can depend on other targets in this package and products from dependencies.
     .target(
       name: "Application",
-      dependencies: ["Domain", "Common"]
+      dependencies: ["Domain", "Common", "Infrastructure"]
     ),
     .testTarget(
       name: "ApplicationTests",
