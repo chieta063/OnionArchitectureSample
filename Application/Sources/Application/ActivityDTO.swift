@@ -12,8 +12,13 @@ public struct ActivityDTO: Identifiable {
   public let id: String
   public let name: String
   
-  init(from domain: Activity) {
+  public init(from domain: Activity) {
     self.id = domain.id.uuidString
     self.name = domain.name
+  }
+  
+  public init(id: String, name: String) {
+    self.id = id
+    self.name = name
   }
 }

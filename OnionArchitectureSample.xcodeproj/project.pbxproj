@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5333A6552C75D51B00B93DCC /* Presentation in Frameworks */ = {isa = PBXBuildFile; productRef = 5333A6542C75D51B00B93DCC /* Presentation */; };
 		538D83FB2C75C60A002468B6 /* OnionArchitectureSampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538D83FA2C75C60A002468B6 /* OnionArchitectureSampleApp.swift */; };
 		538D83FD2C75C60A002468B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538D83FC2C75C60A002468B6 /* ContentView.swift */; };
 		538D83FF2C75C60A002468B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 538D83FE2C75C60A002468B6 /* Assets.xcassets */; };
@@ -58,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5333A6552C75D51B00B93DCC /* Presentation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +80,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5333A6532C75D51B00B93DCC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		538D83EE2C75C60A002468B6 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +94,7 @@
 				538D840A2C75C60A002468B6 /* OnionArchitectureSampleTests */,
 				538D84142C75C60A002468B6 /* OnionArchitectureSampleUITests */,
 				538D83F82C75C60A002468B6 /* Products */,
+				5333A6532C75D51B00B93DCC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,6 +165,9 @@
 			dependencies = (
 			);
 			name = OnionArchitectureSample;
+			packageProductDependencies = (
+				5333A6542C75D51B00B93DCC /* Presentation */,
+			);
 			productName = OnionArchitectureSample;
 			productReference = 538D83F72C75C60A002468B6 /* OnionArchitectureSample.app */;
 			productType = "com.apple.product-type.application";
@@ -602,6 +615,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5333A6542C75D51B00B93DCC /* Presentation */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Presentation;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 538D83EF2C75C60A002468B6 /* Project object */;
 }
