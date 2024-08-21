@@ -9,17 +9,28 @@ import SwiftUI
 import Application
 
 struct ActivityView: View {
+  
   @Environment(\.activityPresenter) private var presenter
+  
   var body: some View {
     NavigationStack {
-      List(presenter.dataList) { activity in
-        VStack(alignment: .leading) {
-          Text(activity.name)
-            .font(.caption)
-          Text(activity.id)
-            .font(.caption2)
-            .foregroundStyle(Color(.systemGray))
+      if presenter.isLoading {
+        ProgressView()
+      } else {
+        List(presenter.dataList) { activity in
+          VStack(alignment: .leading) {
+            Text(activity.name)
+              .font(.caption)
+            Text(activity.id)
+              .font(.caption2)
+              .foregroundStyle(Color(.systemGray))
+          }
         }
+      }
+    }
+    .alert("Error", isPresented: .constant(presenter.error != nil)) {
+      Button("閉じる") {
+        
       }
     }
   }
