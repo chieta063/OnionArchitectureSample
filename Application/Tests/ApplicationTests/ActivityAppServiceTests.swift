@@ -8,6 +8,7 @@
 import XCTest
 import Common
 import Infrastructure
+@testable import Application
 
 final class ActivityAppServiceTests: XCTestCase {
   override class func setUp() {
