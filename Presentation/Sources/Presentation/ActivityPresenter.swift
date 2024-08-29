@@ -17,7 +17,7 @@ public final class ActivityPresenter: ObservableObject {
     self.isLoading = isLoading
     service = service
   }
-  
+
   /// データを取得する
   public func fetchData() async {
     do {

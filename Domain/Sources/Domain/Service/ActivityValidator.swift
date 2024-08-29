@@ -1,6 +1,6 @@
 //
-//  File.swift
-//  
+//  ActivityValidator.swift
+//
 //
 //  Created by 阿部紘明 on 2024/08/29.
 //
@@ -22,7 +22,7 @@ public struct ActivityValidator {
       }
     }
   }
-  
+
   public func validate(activity: Activity) throws {
     if activity.id.count != 7 {
       throw ValidationError.invalidId

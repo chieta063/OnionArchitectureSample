@@ -8,7 +8,7 @@ public struct Activity: Decodable {
     case id = "key"
     case name = "activity"
   }
-  
+
   /// ID
   public let id: String
   /// Activity名

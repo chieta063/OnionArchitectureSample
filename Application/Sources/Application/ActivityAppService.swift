@@ -7,7 +7,7 @@ import Infrastructure
 public struct ActivityAppService {
   @Injected(\.activityRepository) private var repository
   @Injected(\.activityValidator) private var validator
-  
+
   /// データを取得する
   /// - Returns: 取得したデータのDTO
   public func fetchData() async throws -> ActivityDTO {
