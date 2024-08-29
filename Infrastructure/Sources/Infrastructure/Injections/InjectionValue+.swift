@@ -1,9 +1,9 @@
-import Foundation
 import Common
 import Domain
+import Foundation
 
-extension InjectedValues {
-  public var activityRepository: ActivityRepositoryProtocol {
+public extension InjectedValues {
+  var activityRepository: ActivityRepositoryProtocol {
     get { Self[ActivityRepositoryKey.self] }
     set { Self[ActivityRepositoryKey.self] = newValue }
   }

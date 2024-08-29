@@ -1,5 +1,4 @@
-import Foundation
 import Common
+import Foundation
 
-extension InjectedValues {
-}
+extension InjectedValues {}

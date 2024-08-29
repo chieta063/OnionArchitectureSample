@@ -1,13 +1,13 @@
-import Foundation
 import Common
-import Infrastructure
 import Domain
+import Foundation
+import Infrastructure
 
 public struct ActivityAppService {
   // リポジトリ
   @Injected(\.activityRepository) private var repository
-  
+
   public func fetchData() async throws -> ActivityDTO {
-    return ActivityDTO(from: try await repository.fetch())
+    return try ActivityDTO(from: await repository.fetch())
   }
 }

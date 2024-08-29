@@ -1,8 +1,8 @@
-import Foundation
 import Common
+import Foundation
 
-extension InjectedValues {
-  public var activityAppService: ActivityAppService {
+public extension InjectedValues {
+  var activityAppService: ActivityAppService {
     get { Self[ActivityAppServiceKey.self] }
     set { Self[ActivityAppServiceKey.self] = newValue }
   }

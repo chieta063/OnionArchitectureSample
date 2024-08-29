@@ -1,22 +1,22 @@
-import Foundation
-import SwiftUI
 import Application
 import Common
+import Foundation
+import SwiftUI
 
 public final class ActivityPresenter: ObservableObject {
   @Published var data: ActivityDTO?
   @Published var error: Error?
   @Published var isLoading = false
-  
+
   @Injected(\.activityAppService) var service
-  
+
   public init(data: ActivityDTO? = nil, error: Error? = nil, isLoading: Bool = false) {
     self.data = data
     self.error = error
     self.isLoading = isLoading
-    self.service = service
+    service = service
   }
-  
+
   public func fetchData() async {
     do {
       DispatchQueue.main.async {

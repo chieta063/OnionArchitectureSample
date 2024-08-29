@@ -1,5 +1,5 @@
-import Foundation
 import Domain
+import Foundation
 
 public struct ActivityRepository: ActivityRepositoryProtocol {
   public func fetch() async throws -> Activity {

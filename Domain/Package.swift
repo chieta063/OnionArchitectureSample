@@ -14,7 +14,7 @@ let package = Package(
     ),
   ],
   dependencies: [
-    .package(name: "Common", path: "../Common")
+    .package(name: "Common", path: "../Common"),
   ],
   targets: [
     // Targets are the basic building blocks of a package, defining a module or a test suite.

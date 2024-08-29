@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5333A6552C75D51B00B93DCC /* Presentation in Frameworks */ = {isa = PBXBuildFile; productRef = 5333A6542C75D51B00B93DCC /* Presentation */; };
 		538D83FB2C75C60A002468B6 /* OnionArchitectureSampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538D83FA2C75C60A002468B6 /* OnionArchitectureSampleApp.swift */; };
-		538D83FD2C75C60A002468B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538D83FC2C75C60A002468B6 /* ContentView.swift */; };
 		538D83FF2C75C60A002468B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 538D83FE2C75C60A002468B6 /* Assets.xcassets */; };
 		538D84022C75C60A002468B6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 538D84012C75C60A002468B6 /* Preview Assets.xcassets */; };
 		538D840C2C75C60A002468B6 /* OnionArchitectureSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538D840B2C75C60A002468B6 /* OnionArchitectureSampleTests.swift */; };
@@ -39,7 +38,6 @@
 /* Begin PBXFileReference section */
 		538D83F72C75C60A002468B6 /* OnionArchitectureSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnionArchitectureSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		538D83FA2C75C60A002468B6 /* OnionArchitectureSampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnionArchitectureSampleApp.swift; sourceTree = "<group>"; };
-		538D83FC2C75C60A002468B6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		538D83FE2C75C60A002468B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		538D84012C75C60A002468B6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		538D84072C75C60A002468B6 /* OnionArchitectureSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnionArchitectureSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,7 +115,6 @@
 				538D84262C75C6B5002468B6 /* Application */,
 				538D84242C75C648002468B6 /* Presentation */,
 				538D83FA2C75C60A002468B6 /* OnionArchitectureSampleApp.swift */,
-				538D83FC2C75C60A002468B6 /* ContentView.swift */,
 				538D83FE2C75C60A002468B6 /* Assets.xcassets */,
 				538D84002C75C60A002468B6 /* Preview Content */,
 			);
@@ -284,7 +281,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				538D83FD2C75C60A002468B6 /* ContentView.swift in Sources */,
 				538D83FB2C75C60A002468B6 /* OnionArchitectureSampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
