@@ -1,10 +1,3 @@
-//
-//  OnionArchitectureSampleUITestsLaunchTests.swift
-//  OnionArchitectureSampleUITests
-//
-//  Created by 阿部紘明 on 2024/08/21.
-//
-
 import XCTest
 
 final class OnionArchitectureSampleUITestsLaunchTests: XCTestCase {

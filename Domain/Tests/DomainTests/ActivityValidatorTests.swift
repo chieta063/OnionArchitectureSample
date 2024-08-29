@@ -1,10 +1,3 @@
-//
-//  ActivityValidatorTests.swift
-//
-//
-//  Created by 阿部紘明 on 2024/08/29.
-//
-
 import Common
 @testable import Domain
 import XCTest

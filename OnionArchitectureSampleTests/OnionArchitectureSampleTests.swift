@@ -1,10 +1,3 @@
-//
-//  OnionArchitectureSampleTests.swift
-//  OnionArchitectureSampleTests
-//
-//  Created by 阿部紘明 on 2024/08/21.
-//
-
 @testable import OnionArchitectureSample
 import XCTest
 

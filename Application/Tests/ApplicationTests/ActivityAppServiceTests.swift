@@ -1,10 +1,3 @@
-//
-//  ActivityAppServiceTests.swift
-//
-//
-//  Created by 阿部紘明 on 2024/08/21.
-//
-
 @testable import Application
 import Common
 import Infrastructure
