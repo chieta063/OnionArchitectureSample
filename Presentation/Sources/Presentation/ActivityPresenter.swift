@@ -3,6 +3,7 @@ import Common
 import Foundation
 import SwiftUI
 
+/// Activity画面用Presenter
 public final class ActivityPresenter: ObservableObject {
   @Published var data: ActivityDTO?
   @Published var error: Error?
@@ -16,7 +17,8 @@ public final class ActivityPresenter: ObservableObject {
     self.isLoading = isLoading
     service = service
   }
-
+  
+  /// データを取得する
   public func fetchData() async {
     do {
       DispatchQueue.main.async {

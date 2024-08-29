@@ -24,9 +24,5 @@ let package = Package(
       name: "Infrastructure",
       dependencies: ["Domain", "Common"]
     ),
-    .testTarget(
-      name: "InfrastructureTests",
-      dependencies: ["Infrastructure"]
-    ),
   ]
 )

@@ -1,12 +1,17 @@
 import Foundation
 
+/// Activityドメインモデル
+/// IDは７桁固定
+/// Nameは空文字を許容しない
 public struct Activity: Decodable {
   enum CodingKeys: String, CodingKey {
     case id = "key"
     case name = "activity"
   }
-
+  
+  /// ID
   public let id: String
+  /// Activity名
   public let name: String
 
   public init(id: String, name: String) {

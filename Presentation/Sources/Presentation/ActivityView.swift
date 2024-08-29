@@ -8,6 +8,7 @@
 import Application
 import SwiftUI
 
+/// Activityを表示するView
 public struct ActivityView: View {
   @EnvironmentObject private var presenter: ActivityPresenter
 
@@ -44,5 +45,5 @@ public struct ActivityView: View {
 
 #Preview("Eror") {
   ActivityView()
-    .environmentObject(ActivityPresenter(error: PresentationError.somethingWrong))
+    .environmentObject(ActivityPresenter(error: PreviewError.somethingWrong))
 }

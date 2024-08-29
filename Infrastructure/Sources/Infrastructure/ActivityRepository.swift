@@ -1,6 +1,7 @@
 import Domain
 import Foundation
 
+/// Activity管理用Repository
 public struct ActivityRepository: ActivityRepositoryProtocol {
   public func fetch() async throws -> Activity {
     var request = URLRequest(url: URL(string: "https://bored-api.appbrewery.com/random")!)

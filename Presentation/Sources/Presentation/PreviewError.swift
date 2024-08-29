@@ -1,6 +1,7 @@
 import Foundation
 
-public enum PresentationError: Error, LocalizedError {
+/// Previewで擬似的に表示するエラー
+public enum PreviewError: Error, LocalizedError {
   case somethingWrong
   public var errorDescription: String {
     switch self {

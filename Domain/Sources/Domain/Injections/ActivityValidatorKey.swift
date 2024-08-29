@@ -8,6 +8,7 @@
 import Foundation
 import Common
 
+/// ActivityValidatorの注入Key
 public struct ActivityValidatorKey: InjectionKey {
   public static var currentValue: ActivityValidator = .init()
 }

@@ -1,6 +1,7 @@
 import Domain
 import Foundation
 
+/// Activity管理用MockRepository
 public struct MockActivityRepository: ActivityRepositoryProtocol {
   public init() {}
 

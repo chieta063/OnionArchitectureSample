@@ -1,6 +1,8 @@
 import Foundation
 
+/// 注入用オブジェクト
 public struct InjectedValues {
+  /// インスタンス
   private static var current = InjectedValues()
 
   public static subscript<K>(key: K.Type) -> K.Value where K: InjectionKey {

@@ -7,6 +7,8 @@
 
 import Foundation
 
+/// Activity用Validator
+/// Activityの制約に則ってValidationを行う
 public struct ActivityValidator {
   private enum ValidationError: Error, LocalizedError {
     case invalidId
