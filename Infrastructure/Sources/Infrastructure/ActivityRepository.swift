@@ -2,10 +2,11 @@ import Foundation
 import Domain
 
 public struct ActivityRepository: ActivityRepositoryProtocol {
-  public func fetch() async throws -> [Activity] {
-    return [
-      .init(id: .init(), name: "Activity1"),
-      .init(id: .init(), name: "Activity2")
-    ]
+  public func fetch() async throws -> Activity {
+    var request = URLRequest(url: URL(string: "https://bored-api.appbrewery.com/random")!)
+    request.httpMethod = "GET"
+    let (data, _) = try await URLSession.shared.data(for: request)
+    let activity = try JSONDecoder().decode(Activity.self, from: data)
+    return activity
   }
 }

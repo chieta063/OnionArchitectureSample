@@ -8,24 +8,23 @@
 import SwiftUI
 import Application
 
-struct ActivityView: View {
+public struct ActivityView: View {
   
-  @Environment(\.activityPresenter) private var presenter
+  @EnvironmentObject private var presenter: ActivityPresenter
   
-  var body: some View {
+  public init() {}
+  
+  public var body: some View {
     NavigationStack {
       if presenter.isLoading {
         ProgressView()
       } else {
-        List(presenter.dataList) { activity in
-          VStack(alignment: .leading) {
-            Text(activity.name)
-              .font(.caption)
-            Text(activity.id)
-              .font(.caption2)
-              .foregroundStyle(Color(.systemGray))
-          }
-        }
+        Text(presenter.data?.name ?? "データなし")
+      }
+    }
+    .task {
+      if presenter.data == nil {
+        await presenter.fetchData()
       }
     }
     .alert("Error", isPresented: .constant(presenter.error != nil)) {
@@ -38,17 +37,15 @@ struct ActivityView: View {
 
 #Preview("Exists Data") {
   ActivityView()
-    .environment(\.activityPresenter, .init(dataList: [
-      .init(id: UUID().uuidString, name: "Activity1")
-    ]))
+    .environmentObject( ActivityPresenter(data: .init(id: UUID().uuidString, name: "Activity1")))
 }
 
 #Preview("Loading") {
   ActivityView()
-    .environment(\.activityPresenter, .init(isLoading: true))
+    .environmentObject(ActivityPresenter(isLoading: true))
 }
 
 #Preview("Eror") {
   ActivityView()
-    .environment(\.activityPresenter, .init(error: PresentationError.somethingWrong))
+    .environmentObject(ActivityPresenter(error: PresentationError.somethingWrong))
 }

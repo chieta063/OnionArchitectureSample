@@ -6,7 +6,7 @@ public struct ActivityDTO: Identifiable {
   public let name: String
   
   public init(from domain: Activity) {
-    self.id = domain.id.uuidString
+    self.id = domain.id
     self.name = domain.name
   }
   

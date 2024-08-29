@@ -17,7 +17,12 @@ final class ActivityAppServiceTests: XCTestCase {
   
   func testCheckActivityNameNotEmpty() async throws {
     let appService = InjectedValues[\.activityAppService]
-    let activityList = try await appService.fetchData()
-    XCTAssertFalse(activityList.contains(where: \.name.isEmpty))
+    let result = try await appService.fetchData()
+    await XCTContext.runActivity(named: "IDチェック") { _ in
+      XCTAssertEqual(result.id, "123456")
+    }
+    await XCTContext.runActivity(named: "Nameチェック") { _ in
+      XCTAssertEqual(result.name, "MockActivity1")
+    }
   }
 }

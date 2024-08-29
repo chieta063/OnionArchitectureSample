@@ -6,19 +6,23 @@
 //
 
 import SwiftUI
+import Presentation
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+  @State var isPresentedActivity = false
+  var body: some View {
+    VStack {
+      Button("Activity") {
+        isPresentedActivity = true
+      }
     }
+    .fullScreenCover(isPresented: $isPresentedActivity, content: {
+      ActivityView()
+        .environmentObject(ActivityPresenter())
+    })
+  }
 }
 
 #Preview {
-    ContentView()
+  ContentView()
 }
